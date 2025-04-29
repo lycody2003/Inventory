@@ -3,8 +3,8 @@ include('../include/db.php');
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $password = $_POST['password'] ?? '';
+    $username = trim($_POST['username']);
+    $password = $_POST['password'];
 
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
     $stmt->execute([$username]);
@@ -16,9 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: ../pages/dashboard.php');
         exit;
     } else {
-        echo "Login failed!<br>";
-        echo "<a href='../pages/login.php'>Go back to login</a><br>";
-        echo "User Data:<pre>" . print_r($user, true) . "</pre>";
+        echo "Login failed!";
+        echo "<br>";
+        echo "<a href='../pages/login.php'>Go back to login</a>";
+        echo "<br>";
     }
 }
 ?>
