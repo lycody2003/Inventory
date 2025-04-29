@@ -43,6 +43,9 @@ backend/
   register.php
   login.php
   logout.php
+  supplier
+  category
+  product
 
 include/
   db.php

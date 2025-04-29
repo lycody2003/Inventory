@@ -16,7 +16,6 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <h1>Register</h1>
     <form action="../backend/register.php" method="post">
         <h2>Register</h2>
         Username: <input type="text" name="username" autocomplete="off" required><br><br>
