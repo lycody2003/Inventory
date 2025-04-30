@@ -35,6 +35,7 @@ if (!isset($_SESSION['user'])) {
     <a href="suppliers.php">Suppliers</a>
     <a href="categories.php">Categories</a>
     <a href="products.php">Products</a>
+    <a href="chatbot.php">Chatbot</a>
     <a href="../backend/logout.php">Logout</a>
 </div>
 <div class="content">
